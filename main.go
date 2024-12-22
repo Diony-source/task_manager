@@ -1,12 +1,20 @@
 package main
 
 import (
+	"log"
 	"task_manager/database"
 	"task_manager/handlers"
+
+	"github.com/joho/godotenv"
 )
 
-// Main entry point for the Task Manager application
 func main() {
+	// Load environment variables from .env file
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+
 	// Initialize the database
 	database.InitDB()
 
