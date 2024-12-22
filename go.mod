@@ -2,7 +2,10 @@ module task_manager
 
 go 1.23.4
 
-require github.com/jackc/pgx/v4 v4.18.3
+require (
+	github.com/jackc/pgx/v4 v4.18.3
+	github.com/joho/godotenv v1.5.1
+)
 
 require (
 	github.com/jackc/chunkreader/v2 v2.0.1 // indirect
